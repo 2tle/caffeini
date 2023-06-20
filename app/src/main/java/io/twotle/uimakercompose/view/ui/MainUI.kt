@@ -35,7 +35,7 @@ import io.twotle.uimakercompose.view.ui.theme.Citrus
 
 
 @Composable
-fun mainTopBar(username: String = "현주", curCaf: Int = 0, maxCaf: Int = 0) {
+fun mainTopBar(username: String, curCaf: Int = 0, maxCaf: Int = 400) {
     Box(
         modifier = Modifier
             .fillMaxWidth()
@@ -56,7 +56,9 @@ fun mainTopBar(username: String = "현주", curCaf: Int = 0, maxCaf: Int = 0) {
                 horizontalArrangement = Arrangement.SpaceBetween
             ) {
                 Text("카페인 섭취량")
-                Text(curCaf.toString()+"/"+maxCaf.toString()+"mg", fontSize = 30.sp, fontWeight = FontWeight.W600)
+                Text(curCaf.toString()+"/"+maxCaf.toString()+"mg",
+                    fontSize = 30.sp,
+                    fontWeight = FontWeight.W600)
             }
         }
     }

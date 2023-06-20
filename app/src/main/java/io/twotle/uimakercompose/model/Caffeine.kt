@@ -4,5 +4,5 @@ data class Caffeine(
     val uid: String,
     val name: String,
     val date: String,
-    val caffeine: Int
+    val caffeine: Double
 )

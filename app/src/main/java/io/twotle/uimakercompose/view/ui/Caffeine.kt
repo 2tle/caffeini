@@ -32,12 +32,10 @@ import io.twotle.uimakercompose.viewmodel.CaffeineViewModel
 fun CaffineList(caffines: List<Caffeine>) {
     LazyColumn {
         items(caffines) {
-            CaffeineRow(date = it.date, text = it.name , mg = it.caffeine)
+            CaffeineRow(date = it.date, text = it.name , mg = it.caffeine.toInt())
         }
     }
 }
-
-
 @Composable
 fun CaffeineRow(date: String,text: String, mg: Int) {
     Row(
